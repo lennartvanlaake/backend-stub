@@ -20,16 +20,17 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>1.8.0</version>
+                <configuration>
+                  <from>
+                    <image>gcr.io/distroless/java:11</image>
+                  </from>
+                </configuration>    
             </plugin>
         </plugins>
     </build>
